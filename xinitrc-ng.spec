@@ -1,12 +1,12 @@
 Summary:	The default startup scripts for the X Window System
 Summary(pl):	Domy¶lne skrypty startowe X Window System
 Name:		xinitrc-ng
-Version:	0.5
+Version:	0.6
 Release:	1
 License:	GPL
 Group:		X11/XFree86
 Source0:	ftp://ftp.pld-linux.org/software/%{name}/%{name}-%{version}.tar.bz2
-# Source0-md5:	3bc568039fd70a2d48e4873e3011b077
+# Source0-md5:	9746363187e34c4f47e099b6c9524818
 Requires:	XFree86
 Requires:	/bin/sh
 Requires:	twm
