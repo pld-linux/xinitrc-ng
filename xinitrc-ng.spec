@@ -13,7 +13,7 @@ Requires:	twm
 Requires:	which
 Obsoletes:	xscripts
 Obsoletes:	xinitrc
-Provides:	xinitrc
+Provides:	xinitrc = 3.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
