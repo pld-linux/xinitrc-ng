@@ -5,7 +5,7 @@ Version:	0.2
 Release:	1
 License:	GPL
 Group:		X11/XFree86
-Source0:	http://www.kernel.pl/~adgor/pld/%{name}-%{version}.tar.bz2
+Source0:	http://ep09.pld-linux.org/~adgor/pld/%{name}-%{version}.tar.bz2
 # Source0-md5:	63469492a5a7d57f69c52c159d869edc
 Requires:	XFree86
 Requires:	/bin/sh
