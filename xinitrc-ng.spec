@@ -4,11 +4,11 @@ Name:		xinitrc-ng
 Version:	0.8
 Release:	1
 License:	GPL
-Group:		X11/XFree86
-Source0:	ftp://ftp.pld-linux.org/software/%{name}/%{name}-%{version}.tar.bz2
+Group:		X11
+Source0:	ftp://ftp.pld-linux.org/software/xinitrc-ng/%{name}-%{version}.tar.bz2
 # Source0-md5:	30760456eb96b5dea9fadcb7075e90f3
-Requires:	XFree86
 Requires:	/bin/sh
+Requires:	XFree86
 Requires:	twm
 Requires:	which
 Obsoletes:	xscripts
@@ -18,8 +18,8 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The xinitrc-ng package contains the scripts which are used to start
-a window manager and apropriate configuration files.
+The xinitrc-ng package contains the scripts which are used to start a
+window manager and apropriate configuration files.
 
 %description -l pl
 Pakiet xinitrc-ng zawiera skrypty do uruchomienia zarz±dcy okien oraz
@@ -41,9 +41,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README
-%dir /etc/X11/xinit/xinitrc.d
-%attr(755,root,root) %config(noreplace) %verify(not size mtime md5) /etc/X11/xinit/Xclients
-%attr(755,root,root) %config(noreplace) %verify(not size mtime md5) /etc/X11/xinit/xinitrc
-%config(noreplace) %verify(not md5 size mtime) /etc/X11/xinit/Xmodmap
-%config(noreplace) %verify(not md5 size mtime) /etc/X11/xinit/xinitdefs
-%config(noreplace) %verify(not md5 size mtime) /etc/sysconfig/desktop
+%dir %{_sysconfdir}/X11/xinit/xinitrc.d
+%attr(755,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/X11/xinit/Xclients
+%attr(755,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/X11/xinit/xinitrc
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/X11/xinit/Xmodmap
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/X11/xinit/xinitdefs
+%config(noreplace) %verify(not md5 mtime size) /etc/sysconfig/desktop
