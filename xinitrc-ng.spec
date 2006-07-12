@@ -2,7 +2,7 @@ Summary:	The default startup scripts for the X Window System
 Summary(pl):	Domy¶lne skrypty startowe X Window System
 Name:		xinitrc-ng
 Version:	0.8
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11
 Source0:	ftp://ftp.pld-linux.org/software/xinitrc-ng/%{name}-%{version}.tar.bz2
@@ -41,7 +41,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README
-%dir %{_sysconfdir}/X11/xinit/xinitrc.d
 %attr(755,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/X11/xinit/Xclients
 %attr(755,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/X11/xinit/xinitrc
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/X11/xinit/Xmodmap
