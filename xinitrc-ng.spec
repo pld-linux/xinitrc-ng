@@ -2,7 +2,7 @@ Summary:	The default startup scripts for the X Window System
 Summary(pl):	Domy¶lne skrypty startowe X Window System
 Name:		xinitrc-ng
 Version:	0.8
-Release:	4
+Release:	5
 License:	GPL
 Group:		X11
 Source0:	ftp://ftp.pld-linux.org/software/xinitrc-ng/%{name}-%{version}.tar.bz2
@@ -29,7 +29,7 @@ odpowiednie plik konfiguracyjne.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/etc/{X11/xinit/xinitrc.d,sysconfig}
+install -d $RPM_BUILD_ROOT/etc/{X11/xinit/xinitrc.d,sysconfig,wmstyle}
 install -d $RPM_BUILD_ROOT%{_datadir}/xsessions
 
 install Xclients Xmodmap xinitdefs xinitrc $RPM_BUILD_ROOT/etc/X11/xinit/
@@ -46,4 +46,5 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/X11/xinit/Xmodmap
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/X11/xinit/xinitdefs
 %config(noreplace) %verify(not md5 mtime size) /etc/sysconfig/desktop
+%dir /etc/sysconfig/wmstyle
 %dir %{_datadir}/xsessions
