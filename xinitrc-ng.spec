@@ -8,8 +8,8 @@ Group:		X11
 Source0:	ftp://ftp.pld-linux.org/software/xinitrc-ng/%{name}-%{version}.tar.bz2
 # Source0-md5:	30760456eb96b5dea9fadcb7075e90f3
 Requires:	/bin/sh
-Requires:	xorg-app-twm
 Requires:	which
+Requires:	xorg-app-twm
 Provides:	xinitrc >= 3.0
 Obsoletes:	xinitrc
 Obsoletes:	xscripts
