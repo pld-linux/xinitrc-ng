@@ -10,9 +10,9 @@ Source0:	ftp://ftp.pld-linux.org/software/xinitrc-ng/%{name}-%{version}.tar.bz2
 Requires:	/bin/sh
 Requires:	xorg-app-twm
 Requires:	which
-Obsoletes:	xscripts
-Obsoletes:	xinitrc
 Provides:	xinitrc >= 3.0
+Obsoletes:	xinitrc
+Obsoletes:	xscripts
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,8 +32,8 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/etc/{X11/xinit/xinitrc.d,sysconfig,wmstyle}
 install -d $RPM_BUILD_ROOT%{_datadir}/xsessions
 
-install Xclients Xmodmap xinitdefs xinitrc $RPM_BUILD_ROOT/etc/X11/xinit/
-install desktop $RPM_BUILD_ROOT/etc/sysconfig/
+install Xclients Xmodmap xinitdefs xinitrc $RPM_BUILD_ROOT/etc/X11/xinit
+install desktop $RPM_BUILD_ROOT/etc/sysconfig
 
 %clean
 rm -rf $RPM_BUILD_ROOT
