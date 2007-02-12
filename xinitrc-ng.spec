@@ -1,5 +1,5 @@
 Summary:	The default startup scripts for the X Window System
-Summary(pl):	Domy¶lne skrypty startowe X Window System
+Summary(pl.UTF-8):   DomyÅ›lne skrypty startowe X Window System
 Name:		xinitrc-ng
 Version:	0.8
 Release:	6
@@ -20,8 +20,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 The xinitrc-ng package contains the scripts which are used to start a
 window manager and apropriate configuration files.
 
-%description -l pl
-Pakiet xinitrc-ng zawiera skrypty do uruchomienia zarz±dcy okien oraz
+%description -l pl.UTF-8
+Pakiet xinitrc-ng zawiera skrypty do uruchomienia zarzÄ…dcy okien oraz
 odpowiednie plik konfiguracyjne.
 
 %prep
