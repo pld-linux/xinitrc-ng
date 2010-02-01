@@ -2,7 +2,7 @@ Summary:	The default startup scripts for the X Window System
 Summary(pl.UTF-8):	Domyślne skrypty startowe X Window System
 Name:		xinitrc-ng
 Version:	0.8
-Release:	7
+Release:	8
 License:	GPL
 Group:		X11
 Source0:	ftp://ftp.pld-linux.org/software/xinitrc-ng/%{name}-%{version}.tar.bz2
@@ -10,6 +10,7 @@ Source0:	ftp://ftp.pld-linux.org/software/xinitrc-ng/%{name}-%{version}.tar.bz2
 Requires:	/bin/sh
 Requires:	which
 Requires:	xorg-app-twm
+Requires:	xorg-app-xmodmap
 Provides:	xinitrc >= 3.0
 Obsoletes:	xinitrc
 Obsoletes:	xscripts
