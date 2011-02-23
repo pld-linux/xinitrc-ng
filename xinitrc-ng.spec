@@ -2,11 +2,12 @@ Summary:	The default startup scripts for the X Window System
 Summary(pl.UTF-8):	Domyślne skrypty startowe X Window System
 Name:		xinitrc-ng
 Version:	0.8
-Release:	8
+Release:	9
 License:	GPL
 Group:		X11
 Source0:	ftp://ftp.pld-linux.org/software/xinitrc-ng/%{name}-%{version}.tar.bz2
 # Source0-md5:	30760456eb96b5dea9fadcb7075e90f3
+Patch0:		%{name}-profile.patch
 Requires:	/bin/sh
 Requires:	which
 Requires:	xorg-app-twm
@@ -27,6 +28,7 @@ odpowiednie plik konfiguracyjne.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
