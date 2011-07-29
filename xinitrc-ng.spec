@@ -2,11 +2,12 @@ Summary:	The default startup scripts for the X Window System
 Summary(pl.UTF-8):	Domyślne skrypty startowe X Window System
 Name:		xinitrc-ng
 Version:	0.9
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11
 Source0:	%{name}-%{version}.tar.gz
 # Source0-md5:	6c63c305529d783f9603e662bf451edb
+Patch0:		%{name}-Xft.patch
 Requires:	/bin/sh
 Requires:	which
 Requires:	xorg-app-setxkbmap
@@ -29,6 +30,7 @@ odpowiednie plik konfiguracyjne.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %install
 rm -rf $RPM_BUILD_ROOT
