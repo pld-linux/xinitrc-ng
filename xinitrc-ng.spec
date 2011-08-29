@@ -2,7 +2,7 @@ Summary:	The default startup scripts for the X Window System
 Summary(pl.UTF-8):	Domyślne skrypty startowe X Window System
 Name:		xinitrc-ng
 Version:	0.9
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11
 Source0:	%{name}-%{version}.tar.gz
@@ -15,7 +15,7 @@ Requires:	xorg-app-twm
 Requires:	xorg-app-xmodmap
 Requires:	xorg-app-xrdb
 Provides:	xinitrc >= 3.0
-Obsoletes:	xinitrc
+Obsoletes:	xinitrc < 3.0
 Obsoletes:	xscripts
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -34,7 +34,6 @@ odpowiednie plik konfiguracyjne.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
