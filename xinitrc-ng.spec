@@ -7,6 +7,7 @@ License:	GPL
 Group:		X11
 Source0:	%{name}-%{version}.tar.gz
 # Source0-md5:	6c63c305529d783f9603e662bf451edb
+URL:		http://svn.pld-linux.org/trac/svn/wiki/packages/xinitrc-ng
 Patch0:		%{name}-Xft.patch
 Requires:	/bin/sh
 Requires:	which
