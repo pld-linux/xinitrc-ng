@@ -1,3 +1,5 @@
+# TODO
+# - lightdm, slim, entrance, wdm support as XDM
 Summary:	The default startup scripts for the X Window System
 Summary(pl.UTF-8):	Domyślne skrypty startowe X Window System
 Name:		xinitrc-ng
