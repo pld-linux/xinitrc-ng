@@ -4,12 +4,11 @@ Summary:	The default startup scripts for the X Window System
 Summary(pl.UTF-8):	Domyślne skrypty startowe X Window System
 Name:		xinitrc-ng
 Version:	1.1
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11
 Source0:	%{name}-%{version}.tar.gz
 # Source0-md5:	f369317256368bf00dd07957929d5a63
-Patch0:		lightdm-no-to-nodaemon.patch
 URL:		http://svn.pld-linux.org/trac/svn/wiki/packages/xinitrc-ng
 Requires:	/bin/sh
 Requires:	which
@@ -17,6 +16,7 @@ Requires:	xorg-app-setxkbmap
 Requires:	xorg-app-twm
 Requires:	xorg-app-xmodmap
 Requires:	xorg-app-xrdb
+Conflicts:	lightdm < 1.7.12-4
 Provides:	xinitrc >= 3.0
 Obsoletes:	xinitrc < 3.0
 Obsoletes:	xscripts
@@ -33,7 +33,6 @@ odpowiednie plik konfiguracyjne.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
