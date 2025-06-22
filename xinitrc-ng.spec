@@ -3,14 +3,12 @@
 Summary:	The default startup scripts for the X Window System
 Summary(pl.UTF-8):	Domyślne skrypty startowe X Window System
 Name:		xinitrc-ng
-Version:	1.1
-Release:	5
+Version:	1.2
+Release:	1
 License:	GPL
 Group:		X11
 Source0:	%{name}-%{version}.tar.gz
-# Source0-md5:	f369317256368bf00dd07957929d5a63
-Patch0:		xinitrc-execute.patch
-Patch1:		sddm.patch
+# Source0-md5:	c64bf54a56bb7cabaf4568e7ae315517
 URL:		http://svn.pld-linux.org/trac/svn/wiki/packages/xinitrc-ng
 Requires:	/bin/sh
 Requires:	which
@@ -35,8 +33,6 @@ odpowiednie plik konfiguracyjne.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
